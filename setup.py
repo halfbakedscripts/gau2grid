@@ -3,7 +3,7 @@ import re
 import sys
 import platform
 import subprocess
-import versioneer
+#import versioneer
 
 from setuptools import setup, find_packages, Extension
 from setuptools.command.build_ext import build_ext
@@ -106,12 +106,12 @@ if __name__ == "__main__":
     sys.argv = setup_args
 
     # Build full cmdclass
-    cmdclass = versioneer.get_cmdclass()
-    cmdclass["build_ext"] = CMakeBuild
+    #cmdclass = versioneer.get_cmdclass()
+    #cmdclass["build_ext"] = CMakeBuild
 
     setup(
         name='gau2grid',
-        version=versioneer.get_version(),
+        version=0.0001,
         description='Fast computation of a gaussian and its derivative on a grid.',
         author='Daniel G. A. Smith',
         author_email='dgasmith@icloud.com',
@@ -120,7 +120,7 @@ if __name__ == "__main__":
         packages=find_packages(),
         include_package_data=True,
         ext_modules=[CMakeExtension('gau2grid.gg')],
-        cmdclass=cmdclass,
+        cmdclass=None,
         install_requires=[
             'numpy>=1.7',
         ],
