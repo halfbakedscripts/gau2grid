@@ -112,7 +112,7 @@ if __name__ == "__main__":
 
     setup(
         name='gau2grid',
-        version=0.1.0,
+        version=0.1,
         description='Fast computation of a gaussian and its derivative on a grid.',
         author='Daniel G. A. Smith',
         author_email='dgasmith@icloud.com',
